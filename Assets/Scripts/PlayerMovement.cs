@@ -23,6 +23,7 @@ public class PlayerMovement : MonoBehaviour
     private bool hasDoubleJumped = false;     // one per jump
 
     public bool IsGrounded => isGrounded;
+    private float SpeedMultiplier  { get; set;} = 1f; 
 
     private void Start()
     {
@@ -102,10 +103,11 @@ public class PlayerMovement : MonoBehaviour
     private void MovePlayer()
     {
         // Calculate velocity based on current forward vector
-        Vector3 targetVelocity = moveDirection * moveSpeed;
+        Vector3 targetVelocity = moveDirection * moveSpeed * SpeedMultiplier;
 
         // Apply movement while preserving vertical velocity (gravity/jumping)
         rb.linearVelocity = new Vector3(targetVelocity.x, rb.linearVelocity.y, targetVelocity.z);
+
     }
 
      // Tries to jump a second time in mid-air.
