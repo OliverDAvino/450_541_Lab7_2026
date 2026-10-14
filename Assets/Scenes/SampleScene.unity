@@ -1835,6 +1835,10 @@ PrefabInstance:
       propertyPath: turnSpeed
       value: 360
       objectReference: {fileID: 0}
+    - target: {fileID: 878486902361422576, guid: 62d8a5b498779484b9f60efed4e0d447, type: 3}
+      propertyPath: SpeedMultiplier
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2369450611858544408, guid: 62d8a5b498779484b9f60efed4e0d447, type: 3}
       propertyPath: m_Height
       value: 2
