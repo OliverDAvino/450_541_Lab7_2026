@@ -23,7 +23,7 @@ public class PlayerMovement : MonoBehaviour
     private bool hasDoubleJumped = false;     // one per jump
 
     public bool IsGrounded => isGrounded;
-    private float SpeedMultiplier  { get; set;} = 1f; 
+    public float SpeedMultiplier  { get; set;} = 1f; 
 
     private void Start()
     {
@@ -49,7 +49,7 @@ public class PlayerMovement : MonoBehaviour
 
 
         Vector3 cameraForward = Camera.main.transform.forward;
-        Vector3 cameraRight = Camera.main.transform.forward;
+        Vector3 cameraRight = Camera.main.transform.right;
 
         cameraForward.y = 0.0f;
         cameraRight.y = 0.0f;
